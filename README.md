@@ -5,7 +5,7 @@
 <p>
 The project provides a visualization of earthquake data utilizing Leaflet, JavaScript, Mapbox, and HTML.
 
-GeoJSON data was sourced from the USGS.<a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson">Visit USGS data.</a>
+GeoJSON data was sourced from the USGS.<a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"> Visit USGS data.</a>
 
 The map is dynamically created based upon an [EV Dataset](assets/data/EVs.csv). Detailed data about the earthquake can be viewed by clicking the circular marker.
 <a href="https://danawoodruff.github.io/leaflet-challenge/">View GitHub-Page.</a> 

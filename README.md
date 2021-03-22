@@ -8,7 +8,7 @@ The project provides a visualization of GeoJSON earthquake data utilizing Leafle
 GeoJSON data was sourced from the USGS.<a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"> Visit USGS data.</a>
 
 Detailed data about the earthquake can be viewed by clicking the circular marker.
-<a href="https://danawoodruff.github.io/leaflet-challenge/">View GitHub-Page.</a> 
+<a href="https://danawoodruff.github.io/Leaflet-challenge/">View GitHub-Page.</a> 
 The opacity of the bubbles allow the user to identify multiple earthquakes that are overlapped.
 
 <p align="center"><img width="449" height="auto" src="Images/popup.PNG">

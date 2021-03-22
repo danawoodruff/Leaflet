@@ -1,6 +1,6 @@
 
 <html>
-<p align="center"><img width="100%" height="40px" src="Images/Logo.png"></p>            
+<p align="center"><img width="100%" height="40px" src="Images/satelliteMap.png"></p>            
 <body>
 <p>
 The project provides a visualization of GeoJSON earthquake data utilizing Leaflet, JavaScript, Mapbox, and HTML.

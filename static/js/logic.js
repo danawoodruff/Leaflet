@@ -70,13 +70,15 @@ d3.json(queryUrl).then(data => {
 
 
     //   let labels = ['0 - .5km', '.5 - 1km', '1 - 5km', '5 - 10km', '10 - 30km', 'Over 30km'];
-    function getColors(d) {
-      return d > 30 ? "#7114B8" :
-        d > 10 ? "#1258DC" :
-          d > 5 ? "#559E54" :
-            d > 1 ? "#FDED2A" :
-              d > .5 ? "#FB9902" :
-                "#D61A46";
+    function getColor(d) {
+      return d > 30 ? "#D61A46" : //red
+        d > 10 ? "#FB9902" : //orange
+          d > 5 ? "#FDED2A" : //yellow
+            d > 1 ? "#559E54" : //green
+              d > 0.5 ? "#1258DC" : //blue
+                d > 0 ? "#FF00FF" : //fuschia
+                  d > -100 ? "#800080" : //purple
+                    "#800080"; //purple
     }
 
     // Set up the legend
@@ -84,12 +86,16 @@ d3.json(queryUrl).then(data => {
 
     legend.onAdd = function () {
       const div = L.DomUtil.create('div', 'info legend');
-      const depth = [0, .5, 1, 5, 10, 30];
-      const labels = []
+      depth = [0, .5, 1, 5, 10, 30],
+      title = ["Address"],
+      labels = ['<strong>Earthquake Depth</strong>'];
 
       for (let i = 0; i < depth.length; i++) {
+        // console.log(depth[i]);
+        // console.log(getColor(depth[i]));
         div.innerHTML +=
-          '<i style="background: ' + getColors(depth[i] + 1) + '"></i>' + depth[i] + (depth[i + 1] ? '&ndash;' + depth[i + 1] + '<br>' : '+ ');
+          '<i class="circle" style="background: ' + getColor(depth[i]) + '"></i>' + depth[i] + (depth[i + 1] ? '&ndash;' + depth[i + 1] + '<br>' : '+ ');
+        // console.log(div.innerHTML);
       }
       return div
     };
@@ -127,19 +133,19 @@ d3.json(queryUrl).then(data => {
           fillcolor = '#CBE432'; //green
         }
         else if (feature.geometry.coordinates[2] >= .5) {
-          fillcolor = '#559E54'; //green
-        }
-        else if (feature.geometry.coordinates[2] >= 0) {
           fillcolor = '#1258DC'; //blue
         }
-        else fillcolor = '#7114B8'; //purple
+        else if (feature.geometry.coordinates[2] >= 0) {
+          fillcolor = '#FF00FF'; //fuschcia
+        }
+        else fillcolor = '#800080'; //purple
 
         return L.circleMarker(latlng, {
           radius: radius,
           color: 'black',
           fillColor: fillcolor,
           fillOpacity: .5,
-          weight: 1
+          weight: .5
         });
       }
     });

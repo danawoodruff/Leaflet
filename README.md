@@ -1,13 +1,13 @@
 
 <html>
-<p align="center"><img width="100%" height="40px" src="Images/satelliteMap.png"></p>            
+<p align="center"><img width="100%" height="40px" src="Images/satelliteMap.PNG"></p>            
 <body>
 <p>
 The project provides a visualization of GeoJSON earthquake data utilizing Leaflet, JavaScript, Mapbox, and HTML.
 
 GeoJSON data was sourced from the USGS.<a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"> Visit USGS data.</a>
 
-The map is dynamically created based upon an [EV Dataset](assets/data/EVs.csv). Detailed data about the earthquake can be viewed by clicking the circular marker.
+Detailed data about the earthquake can be viewed by clicking the circular marker.
 <a href="https://danawoodruff.github.io/leaflet-challenge/">View GitHub-Page.</a> 
 The opacity of the bubbles allow the user to identify multiple earthquakes that are overlapped.
 

@@ -11,7 +11,7 @@ The map is dynamically created based upon an [EV Dataset](assets/data/EVs.csv). 
 <a href="https://danawoodruff.github.io/leaflet-challenge/">View GitHub-Page.</a> 
 The opacity of the bubbles allow the user to identify multiple earthquakes that are overlapped.
 
-<p align="center"><img width="387" height="auto" src="Images/mouseover.PNG">
+<p align="center"><img width="449" height="auto" src="Images/popup.PNG">
 
 The chart initially loads visualizing a street map view with earthquake events but the user has the option to select a satellite view.
 The radius of the circular marker indicates its magnitude while the color indicates the depth of the earthquake origin in kilometers.

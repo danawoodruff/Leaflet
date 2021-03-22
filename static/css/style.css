@@ -9,4 +9,17 @@ body {
 body,
 html {
   height: 100%;
+  font-size: 14px;
+
+}
+
+.circle {
+  size: 16px;
+
+}
+
+.legend i {
+  float: left;
+  width: 18px;
+  height: 18px;
 }
